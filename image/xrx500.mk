@@ -232,6 +232,15 @@ TARGET_DEVICES += GRX350_1600_V1_VDSL35B_11AC
 
 endif
 
+define Device/GREENWAVE_C4000XG
+  $(Device/xrx500)
+  DEVICE_DTS := c4000xg
+  IMAGES := sysupgrade.bin fullimage.img
+  DEVICE_TITLE := Phicomm k3c 11AC Dual Band Wifi OpenWRT Ethernet Router
+  DEVICE_PACKAGES := $(OWRT_PACKAGES) $(DSL_CPE_PACKAGES) wav500_ax_image
+endef
+TARGET_DEVICES += GREENWAVE_C4000XG
+
 define Device/PHICOMM_K3C
   $(Device/xrx500)
   DEVICE_DTS := k3c
